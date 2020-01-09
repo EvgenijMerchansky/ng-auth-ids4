@@ -1,0 +1,27 @@
+<div class="private">
+    <app-header [logOutHandler]="logOut"></app-header>
+    <div class="test-content">
+      <div class="test-content-info">
+        <h4>JWT on this page refresh - automaticly</h4>
+        <p>But if you want, you can do it manualy clicked on "Refresh JWT" button.</p>
+      </div>
+
+        <button class="test-content-btn" mat-raised-button color="primary" (click)="getTestingData()">Get JWT token-protected data</button>
+        <button
+          (click)="refreshToken()"
+          class="card-button-register refresh-jwt-btn"
+          mat-raised-button color="accent"
+        >
+          Refresh JWT
+        </button>
+        <mat-card class="test-content-card" *ngIf="testingData != null">
+            <ul>
+                <li>email: <span>{{testingData.email}}</span></li>
+                <li>password: <span>{{testingData.password}}</span></li>
+                <li>return url: <span>{{testingData.returnUrl}}</span></li>
+                <li>remember login: <span>{{testingData.rememberLogin}}</span></li>
+            </ul>
+        </mat-card>
+    </div>
+    <ngx-spinner class="spinner">Loading...</ngx-spinner>
+ </div>

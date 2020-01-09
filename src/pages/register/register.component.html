@@ -1,0 +1,66 @@
+<div class="register">
+    <mat-card>
+        <mat-card-title class="register-title">Register</mat-card-title>
+        <mat-card-content>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <p>
+                    <mat-form-field>
+                        <input
+                            type="text"
+                            matInput
+                            name="Email"
+                            placeholder="Email"
+                            formControlName="email"
+                        >
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field>
+                        <input
+                            type="password"
+                            name="Password"
+                            matInput
+                            placeholder="Password"
+                            formControlName="password"
+                        >
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field>
+                        <input
+                            type="password"
+                            name="ConfirmPassword"
+                            matInput
+                            placeholder="Confirm password"
+                            formControlName="confirmPassword"
+                        >
+                    </mat-form-field>
+                </p>
+
+                <div class="button">
+                    <button
+                        class="card-button-register btn"
+                        mat-raised-button color="basic"
+                        type="submit"
+                    >
+                        Register
+                    </button>
+                    <button
+                        (click)="goToLogin()"
+                        class="card-button-register btn"
+                        mat-raised-button
+                        color="accent"
+                        type="submit"
+                    >
+                        &#x2190; to login
+                    </button>
+                </div>
+            </form>
+
+        </mat-card-content>
+    </mat-card>
+    <ngx-spinner class="spinner">Loading...</ngx-spinner>
+</div>

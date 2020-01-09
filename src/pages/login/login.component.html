@@ -1,0 +1,93 @@
+<div class="login">
+  <mat-card>
+    <mat-card-title class="login-title">Login</mat-card-title>
+    <mat-card-content>
+  
+    <form #formSubmit action="{{defaultLoginEndpoint}}" method="post">
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            class="external-login-support"
+            [class.external-login-styles]="isExternalLogin"
+            matInput
+            name="Email"
+            placeholder="Email"
+            value=""
+          />
+        </mat-form-field>
+      </p>
+    
+      <p>
+        <mat-form-field>
+          <input
+            type="password"
+            class="external-login-support"
+            [class.external-login-styles]="isExternalLogin"
+            matInput
+            name="Password"
+            placeholder="Password"
+            value=""
+          />
+        </mat-form-field>
+      </p>
+
+      <p style="visibility: hidden; height: 0;">
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            name="ReturnUrl"
+            placeholder="Password"
+            value="/connect/authorize/callback?client_id=client_id_js&redirect_uri=http%3A%2F%2Flocalhost%3A4200%2Fprivate&response_type=id_token%20token&scope=openid%20ApiOne&nonce=NonceValuedsafliudsayatroiewewryie123&state=SessionValueMakeItABitLongerasdfhjsadoighasdifjdsalkhrfakwelyrosdpiufghasidkgewr"
+          />
+        </mat-form-field>
+      </p>
+    
+      <div class="button">
+        <button
+          (click)="enableLoginSpinner()"
+          class="card-button-login btn"
+          mat-raised-button color="basic"
+          type="submit"
+        >
+          Login
+        </button>
+        <button
+          (click)="goToRegister()"
+          class="card-button-register btn"
+          mat-raised-button color="accent"
+        >
+          Register
+        </button>
+        <button
+          (click)="loginByGoogle()"
+          class="card-button-google btn"
+          mat-raised-button
+          color="warn"
+        >
+          Google
+        </button>
+        <button
+          (click)="loginByFacebook()"
+          class="card-button-facebook btn"
+          mat-raised-button
+          color="primary"
+        >
+          Facebook
+        </button>
+      </div>
+    
+    </form>
+
+    <!-- <button
+      (click)="loginByLib()"
+      class="card-button-login btn"
+      mat-raised-button color="basic"
+    >
+      Login by lib
+    </button> -->
+  </mat-card-content>
+  </mat-card>
+  <ngx-spinner class="spinner">Loading...</ngx-spinner>
+</div>

@@ -1,0 +1,71 @@
+:host {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.login-title {
+    color: #3f51b5;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-button-login {
+
+}
+
+.card-button-register {
+
+}
+
+.card-button-google {
+
+}
+
+.card-button-facebook {
+
+}
+
+.btn {
+    margin: 10px;
+}
+
+.spinner {
+    color: #fff;
+}
+
+.external-login-styles {
+    visibility: hidden;
+}
